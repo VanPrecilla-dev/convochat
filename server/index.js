@@ -8,6 +8,11 @@ app.use(cors());
 
 const server = http.createServer(app); //create web server
 
+app.use("/", (req, res) => {
+  res.send("Server is running")
+})
+
+
 const io = new Server(server, {
   cors: {
     origin: "http://localhost:3000",
