@@ -11,7 +11,7 @@ const socket = io.connect( "http://localhost:3001", {
   reconnectionAttempts: 5, // Number of reconnection attempts
 }); */
 
-const socket = io.connect( "https://convochat-server.vercel.app/", {
+const socket = io.connect( "https://convo-chat-server-dev-rdjn.1.us-1.fl0.io", {
   reconnection: true, // Enable reconnection
   reconnectionAttempts: 5, // Number of reconnection attempts
 });
