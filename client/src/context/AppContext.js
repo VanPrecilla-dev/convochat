@@ -3,7 +3,7 @@ import React, { createContext, useState, useEffect, useRef } from "react";
 import io from "socket.io-client";
 import Peer from "simple-peer";
 
-const socket = io.connect("http://192.168.1.26:3001", {
+const socket = io.connect("http://localhost:3001", {
   reconnection: true, // Enable reconnection
   reconnectionAttempts: 5, // Number of reconnection attempts
 });
@@ -206,7 +206,7 @@ const AppContext = ({ children }) => {
       ]);
     });
 
-    //for listening for edit username data from the other party, this will come from the server
+    //for listening for disconnected other user, this will come from the server
     //store the data received thru this sockect to userList variable and store it on session Storage
     socket.on("exitUser", (data) => {
       sessionStorage.setItem(
@@ -282,7 +282,6 @@ const AppContext = ({ children }) => {
   //function for answering the call in the room
   const answerCall = () => {
     //set that the call is answered
-
     setCallAccepted(true);
 
     //make new peer for the other party
@@ -306,6 +305,7 @@ const AppContext = ({ children }) => {
       userVideo.current.srcObject = stream;
     });
 
+    //connecting the call
     peer.signal(callerSignal);
     connectionRef.current = peer;
 
