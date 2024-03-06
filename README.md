@@ -73,3 +73,75 @@ Usage
 To use CONVO CHAT, navigate to the hosted URL or run it locally. You can join an existing chat room or create a new one. Remember, the room is case-sensitive and can only host two users at a time.
 
 Happy Coding by Van
+
+
+## HOW TO TEST THIS APP
+
+### DOWNLOAD AND RUN LOCALLY
+
+## Download the Code:
+-Download the code from GitHub repository to your local machine.
+
+# Set Up Server:
+-Navigate to the server folder in the downloaded code.
+-Uncomment the CORS configuration in the index.js file and follow the instructions in the comment.
+-Configure the CORS to allow connections from http://localhost:3000 for local testing.
+
+ cors: {
+    origin: "http://localhost:3000",
+    methods: ["GET", "POST"],
+  },
+
+-Run the server using the appropriate command (e.g., npm start).
+
+# Set Up Client:
+-Navigate to the client folder in the downloaded code.
+-Uncomment the socket connection configuration in the AppContext.js file and follow the instructions in the comment.
+-Configure the socket connection to connect to http://localhost:3001 for local testing.
+
+const socket = io.connect( "http://localhost:3001", {
+  reconnection: true, // Enable reconnection
+  reconnectionAttempts: 5, // Number of reconnection attempts
+});
+
+-Run the client using the appropriate command (e.g., npm start).
+-Access the App: Open your web browser and navigate to http://localhost:3000 to access the locally running client application.
+
+# Test the App: 
+- Interact with the app to test its functionality locally. Make sure that the client and server are communicating properly.
+
+-By following these steps, you can download and run the app locally on your machine for testing purposes. Ensure that both the server and client configurations are set up correctly for local testing, including CORS configuration and socket connection settings.
+
+### OPEN IN VERCEL.APP AS STATIC WEBSITE ONLY FOR UI/UX TESTING
+- To test the design and responsiveness of the chat app, you can access the live demo hosted on Vercel.app:
+
+
+
+LIVE DEMO : https://van-convochat-client.vercel.app/
+
+Please note that this demo is set up as a static website only and does not include WebSocket functionality or server back-end. Therefore, you won't be able to connect with other users or send/receive real-time messages.
+
+## Instructions for Testing:
+- Visit the provided link to access the live demo of the chat app.
+- Explore the user interface to test the design and responsiveness on different devices and screen sizes.
+- Interact with the available functions and features to understand the overall user experience.
+
+- Please keep in mind that you won't be able to send or receive messages since WebSocket functionality is disabled in this demo.
+
+- By testing the demo, you can evaluate the design, layout, and usability of the chat app across various devices and screen resolutions. If you have any feedback or suggestions, feel free to share them. Thank you for testing!
+
+### OPEN IN RENDER WITH 5 MINS CUT-OFF OF THE SERVER AND NEED TO REENTER THE ROOM BUT YOU CAN CHAT AND CALL REAL-TIME
+
+You can test the chat and real-time calling features of the app deployed on Render. Please note the following limitations and instructions:
+
+- Server Cut-Off: The server is deployed on a free plan and has a 5-minute cut-off. After 5 minutes of inactivity, you'll need to re-enter the room and refresh the page.
+
+- Fl0 Server: The server is hosted on a Fl0 site with free project limitations. If the server is inactive, please message me for assistance.
+
+- Render App: The React app is deployed on Render's free tier plan with limitations. Some functions may not work properly, such as changing the username, and exiting the room or refreshing the page may result in a NOT FOUND error.
+
+- Instructions: Test the chat and real-time calling features continuously within the 5-minute window. If the server becomes inactive or the page shows a NOT FOUND error, refresh the main link and create a new room.
+
+RENDER LINK: https://convochat-vdu0.onrender.com/
+
+Thank you for testing! If you encounter any issues or have feedback, feel free to reach out.
