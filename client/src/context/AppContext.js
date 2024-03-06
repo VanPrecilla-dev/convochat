@@ -3,7 +3,15 @@ import React, { createContext, useState, useEffect, useRef } from "react";
 import io from "socket.io-client";
 import Peer from "simple-peer";
 
-const socket = io.connect("http://localhost:3001", {
+
+/* 
+UNCOMMENT THIS WHEN YOU ARE RUNNING THIS CHAT APP LOCALLY AND COMMENT BELOW IF NOT
+const socket = io.connect( "http://localhost:3001", {
+  reconnection: true, // Enable reconnection
+  reconnectionAttempts: 5, // Number of reconnection attempts
+}); */
+
+const socket = io.connect( "https://convochat-server.vercel.app/", {
   reconnection: true, // Enable reconnection
   reconnectionAttempts: 5, // Number of reconnection attempts
 });
