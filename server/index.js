@@ -22,6 +22,12 @@ const io = new Server(server, {
     methods: ["GET", "POST"],
   }, */
 
+  
+ cors: {
+    origin: "https://convochat-vdu0.onrender.com",
+    methods: ["GET", "POST"],
+  }, 
+
   connectionStateRecovery: {
     // the backup duration of the sessions and the packets
     maxDisconnectionDuration: 2 * 60 * 1000,
