@@ -15,7 +15,7 @@ app.use("/", (req, res) => {
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin:"https://van-convochat-client.vercel.app/" || "http://localhost:3000",
     methods: ["GET", "POST"],
   },
   connectionStateRecovery: {
