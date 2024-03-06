@@ -14,10 +14,14 @@ app.use("/", (req, res) => {
 
 
 const io = new Server(server, {
-  cors: {
-    origin:"https://van-convochat-client.vercel.app/" || "http://localhost:3000",
+
+ /*  
+ UNCOMMENT THIS WHEN YOU ARE RUNNING THIS CHAT APP LOCALLY AND COMMENT BELOW IF NOT
+ cors: {
+    origin: "http://localhost:3000",
     methods: ["GET", "POST"],
-  },
+  }, */
+
   connectionStateRecovery: {
     // the backup duration of the sessions and the packets
     maxDisconnectionDuration: 2 * 60 * 1000,
