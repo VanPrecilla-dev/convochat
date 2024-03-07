@@ -1,5 +1,5 @@
 # CONVO CHAT
-
+- see below instruction to test this chat app thru local and render
 ## Overview
 
 CONVO CHAT is a real-time chat application designed for private communication between two users. Built with ReactJS, Node.js, Express.js, and leveraging Socket.io for real-time bidirectional event-based communication, it offers a seamless chatting experience. The application supports text messages and video/audio calls, thanks to simple-peer, and adds engaging user interfaces with React Lottie animations.
